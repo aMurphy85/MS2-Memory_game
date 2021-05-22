@@ -27,6 +27,10 @@ const cardsArray = [
     },
 ]
 
+// Duplicating cards for matching from http.
+let gameGrid = cardsArray.concat(cardsArray);
+
+
 
 // Match function from http.
 
