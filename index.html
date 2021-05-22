@@ -1,0 +1,81 @@
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css" type="text/css">
+</head>
+<body>
+    <!-- Webpage page heading -->
+    <div class="row no-gutters">
+        <div class="col">
+            <h1>among us</h1>
+            <img src="" alt="">
+        </div>
+    </div>
+    
+
+    <!-- Game timer and click counter -->
+    <div class="row">
+        <div class="col">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <!-- Game area / cards -->        
+    
+    <div id="gameArea">
+        <div class="cardFront"></div>
+        <div class="cardBack"></div>
+    </div>
+    
+
+    <!-- Restart button / modal from bootstrap -->
+    <!-- Button trigger modal -->
+    <div class="row no-gutters">
+        <button type="button" class="btn restartBtn" data-bs-toggle="modal" data-bs-target="#restart">
+        Restart
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="restart" tabindex="-1" aria-labelledby="restartModel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title" id="restartModal">Restart Game</h2>
+                    </div>
+                    <div class="modal-body">
+                        <h5><strong>Are you sure you want to restart?</strong></h5>
+                    </div>
+                    <div class="modal-footer justify-content-center">
+                        <button type="button" class="btn modalBtn">Yes</button>
+                        <button type="button" class="btn modalBtn" data-bs-dismiss="modal">No</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Links to socials and the amoong us game home page -->
+    <footer>
+        <div class="row">
+            <div class="col">
+
+            </div>
+        </div>
+    </footer>
+
+    
+
+<script src="assets/js/script.js"></script>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+</html>
