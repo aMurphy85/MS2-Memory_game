@@ -9,6 +9,7 @@ body {
   display: block;
 }
 
+/* header */
 .header {
     align-content: center;
     border-bottom: 3px dashed #000;
@@ -24,6 +25,27 @@ body {
     max-width: 700px;
 }
 
+/* scores timer and clicks counter */
+.timer,
+.clicks {
+    margin: 3px;
+    padding: 0;
+}
+
+.results {
+    background-color: #000;
+    border: 3px solid #f8f8ff;
+    border-radius: 6px;
+    color: #f8f8ff;
+    font-size: 20px;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    max-width: 150px;
+}
+
+/* game area styling */
 .grid {
   max-width: 640px;
   margin: 0 auto;
@@ -59,6 +81,10 @@ body {
   background: #000 url('../imgs/backCard\ \(2\)\ \(1\).png') no-repeat center center / contain;
 }
 
+.front:hover {
+    border: 2px solid cyan;
+}
+
 .back {
   transform: rotateY(180deg);
   background-color: #FFDE2A;
@@ -73,4 +99,103 @@ body {
 
 .match .front {
   background: none !important;
+}
+
+/* restart game button and modal styling */
+#restartBtn {
+    background-color: #000;
+    border: 3px solid #f8f8ff;
+    border-radius: 3px;
+    color: #f8f8ff;
+    font-size: 20px;
+    height: 100%;
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#restartBtn:hover {
+    background-color: #f8f8ff;
+    border: 3px solid #000;
+    color: #000;
+}
+
+
+/* footer socials styling */
+.socials {
+    padding: 20px 0 0 0;
+}
+
+#socials {
+    display: flex;
+    padding: 0;
+}
+
+.socialLink {
+    height: 100px;
+    text-align: center;
+    color: #fafafa;
+    background-color: #8f8f8f;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+.socialLink p {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.socialLink p {
+    margin: 0;
+    padding-top: 5px;
+}
+
+.socialLink a i {
+    color: #f8f8ff;
+    font-size: 20px;
+    margin: auto;
+    padding: 10px;
+}
+
+#youtubeLink:hover {
+    background-color: #c4302b;
+}
+
+#twitchLink:hover {
+    background-color: #6441a5;
+}
+
+#steamLink:hover {
+    background-color: #2a475e;
+}
+
+/* media queries */
+
+@media (max-width: 672px) {
+    .card,
+    .back,
+    .front {
+    border-radius: 6px;
+    height: 85px;
+    width: 85px;
+    }
+    .card {
+        margin: 2px;
+    }
+}
+
+@media (max-width: 320px) {
+    .card,
+    .back,
+    .front {
+    border-radius: 6px;
+    height: 70px;
+    width: 70px;
+    }
+    .card {
+        margin: 2px;
+    }
 }
