@@ -25,99 +25,94 @@ const cardsArray = [
     {
         name: 'teal Crewmate', img: 'assets/imgs/tealCrewmate.png',
     },
-]
-
-// Duplicating cards for matching from http.
-let gameGrid = cardsArray.concat(cardsArray);
-
-// Shuffle cards function from http.
-gameGrid.sort(() => 0.5 - Math.random());
+];
 
 // Global variables
+const gameGrid = cardsArray
+  .concat(cardsArray)
+  .sort(() => 0.5 - Math.random());
+
 let firstGuess = '';
 let secondGuess = '';
 let count = 0;
 let previousTarget = null;
 let delay = 1200;
-let timerStart = false;
-let clickCounter = 0;
 
+const game = document.getElementById('game');
+const grid = document.createElement('section');
+grid.setAttribute('class', 'grid');
+game.appendChild(grid);
 
-// Match function from http.
+gameGrid.forEach(item => {
+  const { name, img } = item;
 
-let gameArea = document.getElementById('gameArea');
+  const card = document.createElement('div');
+  card.classList.add('card');
+  card.dataset.name = name;
 
-let cardGrid = document.createElement('section');
-cardGrid.setAttribute('class', 'cardGrid');
+  const front = document.createElement('div');
+  front.classList.add('front');
 
-gameArea.appendChild(cardGrid);
+  const back = document.createElement('div');
+  back.classList.add('back');
+  back.style.backgroundImage = `url(${img})`;
 
-gameGrid.forEach((item) => {
-    // create div for card
-    let gameCard = document.createElement('div');
-
-    // Apply class to the div
-    gameCard.classList.add('gameCard');
-
-    // Set a dataset attribute to the div
-    gameCard.dataset.name = item.name;
-
-    // Apply img to card div
-    gameCard.style.backgroundImage = `url(${item.img})`;
-
-    // Append the div to the game card area
-    cardGrid.appendChild(gameCard);
+  grid.appendChild(card);
+  card.appendChild(front);
+  card.appendChild(back);
 });
 
-// Cards are a match fuction 
-let cardsMatch = () => {
-    var selected = document.querySelectorAll('.selected');
-    selected.forEach((gameCard) => {
-        gameCard.classList.add('cardMatch');
-    });
-}
+const match = () => {
+  const selected = document.querySelectorAll('.selected');
+  selected.forEach(card => {
+    card.classList.add('match');
+  });
+};
 
-let cardsNoMatch = () => {
-    firstGuess = '';
-    secondGuess = '';
-    count = 0;
+const resetGuesses = () => {
+  firstGuess = '';
+  secondGuess = '';
+  count = 0;
+  previousTarget = null;
 
-    var selected = document.querySelectorAll('.selected');
-    selected.forEach((gameCard) => {
-        gameCard.classList.remove('selected');
-    });
-}
+  var selected = document.querySelectorAll('.selected');
+  selected.forEach(card => {
+    card.classList.remove('selected');
+  });
+};
 
-// Add event listner to cards in game area
+grid.addEventListener('click', event => {
 
-cardGrid.addEventListener('click', function(event) {
-    let clicked = event.target;
+  const clicked = event.target;
 
-    if (clicked.nodeName === 'SECTION' || clicked === previousTarget) {
-        return;
+  if (
+    clicked.nodeName === 'SECTION' ||
+    clicked === previousTarget ||
+    clicked.parentNode.classList.contains('selected') ||
+    clicked.parentNode.classList.contains('match')
+  ) {
+    return;
+  }
+
+  if (count < 2) {
+    count++;
+    if (count === 1) {
+      firstGuess = clicked.parentNode.dataset.name;
+      console.log(firstGuess);
+      clicked.parentNode.classList.add('selected');
+    } else {
+      secondGuess = clicked.parentNode.dataset.name;
+      console.log(secondGuess);
+      clicked.parentNode.classList.add('selected');
     }
 
-    // Add the selected class
-    if (count < 2) {
-        count++
-        if (count === 1) {
-            firstGuess = clicked.dataset.name;
-            clicked.classList.add('selected');
-        } else {
-            secondGuess = clicked.dataset.name;
-            clicked.classList.add('selected');
-        }
+    if (firstGuess && secondGuess) {
+      if (firstGuess === secondGuess) {
+        setTimeout(match, delay);
+      }
+      setTimeout(resetGuesses, delay);
+    }
+    previousTarget = clicked;
+  }
 
-        if (firstGuess !== '' && secondGuess !== '') {
-            if (firstGuess === secondGuess) {
-                setTimeout(cardsMatch, delay);
-                setTimeout(cardsNoMatch, delay);
-            } else {
-                setTimeout(cardsNoMatch, delay);
-            }
-        }
-
-        previousTarget = clicked;
-    }    
 });
-
