@@ -30,6 +30,17 @@ const cardsArray = [
 // Duplicating cards for matching from http.
 let gameGrid = cardsArray.concat(cardsArray);
 
+// Shuffle cards function from http.
+gameGrid.sort(() => 0.5 - Math.random());
+
+// Global variables
+let firstGuess = '';
+let secondGuess = '';
+let count = 0;
+let previousTarget = null;
+let delay = 1200;
+let timerStart = false;
+let clickCounter = 0;
 
 
 // Match function from http.
@@ -57,3 +68,56 @@ gameGrid.forEach((item) => {
     // Append the div to the game card area
     cardGrid.appendChild(gameCard);
 });
+
+// Cards are a match fuction 
+let cardsMatch = () => {
+    var selected = document.querySelectorAll('.selected');
+    selected.forEach((gameCard) => {
+        gameCard.classList.add('cardMatch');
+    });
+}
+
+let cardsNoMatch = () => {
+    firstGuess = '';
+    secondGuess = '';
+    count = 0;
+
+    var selected = document.querySelectorAll('.selected');
+    selected.forEach((gameCard) => {
+        gameCard.classList.remove('selected');
+    });
+}
+
+// Add event listner to cards in game area
+
+cardGrid.addEventListener('click', function(event) {
+    let clicked = event.target;
+
+    if (clicked.nodeName === 'SECTION' || clicked === previousTarget) {
+        return;
+    }
+
+    // Add the selected class
+    if (count < 2) {
+        count++
+        if (count === 1) {
+            firstGuess = clicked.dataset.name;
+            clicked.classList.add('selected');
+        } else {
+            secondGuess = clicked.dataset.name;
+            clicked.classList.add('selected');
+        }
+
+        if (firstGuess !== '' && secondGuess !== '') {
+            if (firstGuess === secondGuess) {
+                setTimeout(cardsMatch, delay);
+                setTimeout(cardsNoMatch, delay);
+            } else {
+                setTimeout(cardsNoMatch, delay);
+            }
+        }
+
+        previousTarget = clicked;
+    }    
+});
+
