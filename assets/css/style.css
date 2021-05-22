@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Body styling */
+
+/* Title styling */
+
+/* Score counters styling */
+
+/* Game card area */
+
+.cardGrid {
+    background-color: yellow;
+    max-width: 640px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+/* Restart button styling */
+
