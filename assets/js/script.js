@@ -26,3 +26,30 @@ const cardsArray = [
         name: 'teal Crewmate', img: 'assets/imgs/tealCrewmate.png',
     },
 ]
+
+
+// Match function from http.
+
+let gameArea = document.getElementById('gameArea');
+
+let cardGrid = document.createElement('section');
+cardGrid.setAttribute('class', 'cardGrid');
+
+gameArea.appendChild(cardGrid);
+
+gameGrid.forEach((item) => {
+    // create div for card
+    let gameCard = document.createElement('div');
+
+    // Apply class to the div
+    gameCard.classList.add('gameCard');
+
+    // Set a dataset attribute to the div
+    gameCard.dataset.name = item.name;
+
+    // Apply img to card div
+    gameCard.style.backgroundImage = `url(${item.img})`;
+
+    // Append the div to the game card area
+    cardGrid.appendChild(gameCard);
+});
