@@ -1,43 +1,76 @@
-* {
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-/* Body styling */
-
-/* Title styling */
-
-/* Score counters styling */
-
-/* Game card area */
-
-.cardGrid {
-    background-color: yellow;
-    max-width: 640px;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+body {
+  margin: 20px 0;
+  display: block;
 }
 
-.gameCard {
-    margin: 5px;
-    padding: 0;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-    border: 3px solid #000;
-    border-radius: 6px;
-    height: 150px;
-    width: 150px;    
+.header {
+    align-content: center;
+    border-bottom: 3px dashed #000;
+    height: 200px;
+    max-width: 650px;
+    margin: 10px;
+    padding: 20px;
+}
+
+.header img {
+    height: 100%;
+    width: 100%;
+    max-width: 700px;
+}
+
+.grid {
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.card {
+  position: relative;
+  transition: all .4s linear;
+  transform-style: preserve-3d;
+  margin: 5px;
+  border: 0;
+}
+
+.card,
+.back,
+.front {
+  border-radius: 6px;
+  height: 150px;
+  width: 150px;
+}
+
+.back,
+.front {
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.front {
+  z-index: 2;
+  background: #000 url('../imgs/backCard\ \(2\)\ \(1\).png') no-repeat center center / contain;
+}
+
+.back {
+  transform: rotateY(180deg);
+  background-color: #FFDE2A;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .selected {
-    border: 3px solid red;
-}
-.cardMatch {
-    border: 3px solid green;
-    background-image: none !important;
+  transform: rotateY(180deg);
 }
 
-/* Restart button styling */
-
+.match .front {
+  background: none !important;
+}
