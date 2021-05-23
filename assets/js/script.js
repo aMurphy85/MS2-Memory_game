@@ -131,3 +131,4 @@ grid.addEventListener('click', event => {
 function restart() {
     document.location.href = "";
 }
+ 

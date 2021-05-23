@@ -5,8 +5,9 @@
 }
 
 body {
-  margin: 20px 0;
-  display: block;
+    background: radial-gradient(#b1b1b1, #000);
+    margin: 0;
+    display: block;
 }
 
 /* header */
@@ -26,8 +27,7 @@ body {
 }
 
 /* scores timer and clicks counter */
-.timer,
-.clicks {
+.flips {
     margin: 3px;
     padding: 0;
 }
@@ -38,7 +38,7 @@ body {
     border-radius: 6px;
     color: #f8f8ff;
     font-size: 20px;
-    margin: 5px;
+    margin: 10px;
     padding: 5px;
     text-align: center;
     text-transform: uppercase;
@@ -47,38 +47,40 @@ body {
 
 /* game area styling */
 .grid {
-  max-width: 640px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+    background: #f8f8ff;
+    border-radius: 12px;
+    max-width: 640px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .card {
-  position: relative;
-  transition: all .4s linear;
-  transform-style: preserve-3d;
-  margin: 5px;
-  border: 0;
+    position: relative;
+    transition: all .4s linear;
+    transform-style: preserve-3d;
+    margin: 5px;
+    border: 0;
 }
 
 .card,
 .back,
 .front {
-  border-radius: 6px;
-  height: 150px;
-  width: 150px;
+    border-radius: 6px;
+    height: 150px;
+    width: 150px;
 }
 
 .back,
 .front {
-  position: absolute;
-  backface-visibility: hidden;
+    position: absolute;
+    backface-visibility: hidden;
 }
 
 .front {
-  z-index: 2;
-  background: #000 url('../imgs/backCard\ \(2\)\ \(1\).png') no-repeat center center / contain;
+    z-index: 2;
+    background: #000 url('../imgs/backCard\ \(2\)\ \(1\).png') no-repeat center center / contain;
 }
 
 .front:hover {
@@ -86,19 +88,19 @@ body {
 }
 
 .back {
-  transform: rotateY(180deg);
-  background-color: #FFDE2A;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
+    transform: rotateY(180deg);
+    background-color: #FFDE2A;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 .selected {
-  transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
 
 .match .front {
-  background: none !important;
+    background: none !important;
 }
 
 /* restart game button and modal styling */
@@ -117,13 +119,15 @@ body {
 
 #restartBtn:hover {
     background-color: #f8f8ff;
-    border: 3px solid #000;
+    border: 3px solid cyan;
     color: #000;
 }
 
 
 /* footer socials styling */
 .socials {
+    justify-items: baseline;
+    margin: 0;
     padding: 20px 0 0 0;
 }
 
@@ -134,6 +138,8 @@ body {
 
 .socialLink {
     height: 100px;
+    justify-content: center;
+    padding: 10px;
     text-align: center;
     color: #fafafa;
     background-color: #8f8f8f;
@@ -160,16 +166,24 @@ body {
     padding: 10px;
 }
 
+#about:hover {
+    background-color: #252525;
+    padding: 15px;
+}
+
 #youtubeLink:hover {
     background-color: #c4302b;
+    padding: 15px;
 }
 
 #twitchLink:hover {
     background-color: #6441a5;
+    padding: 15px;
 }
 
 #steamLink:hover {
     background-color: #2a475e;
+    padding: 15px;
 }
 
 /* media queries */
