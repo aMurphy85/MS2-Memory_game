@@ -27,11 +27,11 @@ const cardsArray = [
     },
 ];
 
-// Global variables
 const gameGrid = cardsArray
   .concat(cardsArray)
   .sort(() => 0.5 - Math.random());
 
+// Global variables
 let firstGuess = '';
 let secondGuess = '';
 let count = 0;
@@ -116,3 +116,7 @@ grid.addEventListener('click', event => {
   }
 
 });
+
+function restart() {
+    document.location.href = "";
+}
