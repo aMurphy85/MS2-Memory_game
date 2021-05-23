@@ -37,6 +37,7 @@ let secondGuess = '';
 let count = 0;
 let previousTarget = null;
 let delay = 1200;
+let flips = 0;
 
 const game = document.getElementById('game');
 const grid = document.createElement('section');
@@ -81,6 +82,14 @@ const resetGuesses = () => {
   });
 };
 
+// Flips counter function
+let counter = document.querySelector(".flips");
+
+function flipsCounter() {    
+    flips++;    
+    counter.innerHTML = flips;
+}
+
 grid.addEventListener('click', event => {
 
   const clicked = event.target;
@@ -100,10 +109,12 @@ grid.addEventListener('click', event => {
       firstGuess = clicked.parentNode.dataset.name;
       console.log(firstGuess);
       clicked.parentNode.classList.add('selected');
+      flipsCounter();
     } else {
       secondGuess = clicked.parentNode.dataset.name;
       console.log(secondGuess);
       clicked.parentNode.classList.add('selected');
+      flipsCounter();
     }
 
     if (firstGuess && secondGuess) {
