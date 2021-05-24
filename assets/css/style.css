@@ -8,6 +8,7 @@ body {
     background: radial-gradient(#b1b1b1, #000);
     margin: 0;
     display: block;
+    text-align: center;
     text-transform: uppercase;
 }
 
@@ -54,10 +55,12 @@ body {
 .grid {
     background: #f8f8ff;
     border-radius: 12px;
-    max-width: 640px;
+    height: 640px;
+    width: 640px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: space-evenly;
 }
 
@@ -182,32 +185,36 @@ body {
 
 }
 
-#victory {
+.victory {
     visibility: hidden;
 }
 
-.victoryPopup {
+#victoryPopup {
     position: fixed;
     left: 0;
     right: 0;
     top: 35%;
     bottom: 0;
-    justify-content: center;
-    align-items:center;
-    z-index: 100;
-    
+    align-items: center;
+    width: 100vw;
+    z-index: 100;    
 }
 
 .popupBody {
     background: #f8f8ff;
     border: 2px solid #c4302b;
     border-radius: 12px;
-    height: 250px;
-    width: 450px;
+    height: fit-content;
+    width: fit-content;
     margin: auto;
     padding: 15px 10px 15px 10px;
+    text-align: center;
 }
 
+.popupFooter,
+button {
+    text-align: center;
+}
 
 .victoryPopup,
 h1,
@@ -225,8 +232,9 @@ p {
     border-radius: 3px;
     color: #f8f8ff;
     height: 45px;
-    margin: 10px;
+    margin-top: 10px;
     text-align: center;
+    text-transform: uppercase;
 }
 
 #playAgain:hover {
@@ -238,6 +246,11 @@ p {
 /* media queries */
 
 @media (max-width: 672px) {
+    .grid {
+        margin: 3px;
+        width: fit-content;
+        height: fit-content;
+    }
     .card,
     .back,
     .front {
@@ -248,9 +261,17 @@ p {
     .card {
         margin: 2px;
     }
+    .popupBody {
+        margin: 5px;
+    }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 321px) {
+    .grid {
+        height: fit-content;
+        width: fit-content;
+        margin: 2px;
+    }
     .card,
     .back,
     .front {
@@ -260,5 +281,10 @@ p {
     }
     .card {
         margin: 2px;
+    }
+    .popupBody {
+        height: fit-content;
+        width: fit-content;
+        margin: 4px;
     }
 }
