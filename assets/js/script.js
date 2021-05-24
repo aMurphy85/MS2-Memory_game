@@ -38,6 +38,7 @@ let count = 0;
 let previousTarget = null;
 let delay = 1200;
 let flips = 0;
+let cardCount = 0;
 
 const game = document.getElementById('game');
 const grid = document.createElement('section');
@@ -89,6 +90,15 @@ function flipsCounter() {
     flips++;    
     counter.innerHTML = flips;
 }
+let victoryModal = document.getElementById('victory');
+// Victory modal popup
+function victory() {
+    
+    victory.style.visibility = 'visible';
+    victory.querySelector('.totalFlips').innerHTML = '+ flips +';
+}
+
+
 
 grid.addEventListener('click', event => {
 
@@ -119,14 +129,21 @@ grid.addEventListener('click', event => {
 
     if (firstGuess && secondGuess) {
       if (firstGuess === secondGuess) {
-        setTimeout(match, delay);
+          cardCount++;
+          setTimeout(match, delay);
       }
       setTimeout(resetGuesses, delay);
     }
     previousTarget = clicked;
   }
 
+  if (cardCount === 8) {
+      console.log(cardCount);
+      victory();
+  }
+
 });
+
 
 function restart() {
     document.location.href = "";
