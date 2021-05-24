@@ -36,22 +36,22 @@
     <!-- Button trigger modal -->
     <div class="row no-gutters justify-content-center">
         <button type="button" id="restartBtn" class="btn restartBtn" data-bs-toggle="modal" data-bs-target="#restart">
-        Restart
+        <strong>Restart</strong>
         </button>
 
         <!-- Modal -->
-        <div class="modal fade" id="restart" tabindex="-1" aria-labelledby="restartModel" aria-hidden="true">
+        <div class="modal fade restartModal" id="restart" tabindex="-1" aria-labelledby="restartModel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h2 class="modal-title" id="restartModal">Restart Game</h2>
+                        <h2 class="modal-title" id="restartModal"><strong>Restart Game!</strong></h2>
                     </div>
                     <div class="modal-body">
                         <h5><strong>Are you sure you want to restart?</strong></h5>
                     </div>
                     <div class="modal-footer justify-content-center">
-                        <button type="button" class="btn modalBtn" onclick="restart()">Yes</button>
-                        <button type="button" class="btn modalBtn" data-bs-dismiss="modal">No</button>
+                        <button type="button" class="btn modalBtn" onclick="restart()"><strong>Yes</strong></button>
+                        <button type="button" class="btn modalBtn" data-bs-dismiss="modal"><strong>No</strong></button>
                     </div>
                 </div>
             </div>
@@ -67,15 +67,15 @@
     <!-- Victory popup -->
     <div class="victoryPopup" id="victory">
         <div class="popupBody">
-            <h1>Victory!</h1>
+            <h1><strong>Victory!</strong></h1>
             <div class="popupContent">
-                <p> Well done you manged to match all the cards in
-                    <span id="totalFlips"> </span> flips!
+                <p><strong>Well done you manged to match all the cards in
+                    <span id="totalFlips"> </span> flips!</strong> 
                 </p>
             </div>
             <div class="popupFooter">
-                <p>Why not try and beat your total flips score?</p>
-                <button id="playAgain" onclick="restart()">Play Again</button>
+                <p><strong>Why not try and beat your total flips score?</strong></p>
+                <button id="playAgain" onclick="restart()"><strong>Play Again</strong></button>
             </div>
         </div>
     </div>
