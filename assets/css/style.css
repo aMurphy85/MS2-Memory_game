@@ -8,6 +8,7 @@ body {
     background: radial-gradient(#b1b1b1, #000);
     margin: 0;
     display: block;
+    text-transform: uppercase;
 }
 
 /* header */
@@ -28,7 +29,6 @@ body {
 
 .instructions {
     color: #fafafa;
-    text-transform: uppercase;
     text-align: center;
 }
 
@@ -47,7 +47,6 @@ body {
     margin: 10px;
     padding: 5px;
     text-align: center;
-    text-transform: uppercase;
     max-width: 150px;
 }
 
@@ -129,6 +128,49 @@ body {
     color: #000;
 }
 
+.restartModal {
+    text-transform: uppercase;
+}
+
+.modal-content {
+    background: #f8f8ff;
+    border: 2px solid #c4302b;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.modal-title {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.modal-footer {
+    height: 100%;
+    width: 100%;
+    padding-top: 0;
+}
+
+.modalBtn {
+    background-color: #000;
+    border: 2px solid cyan;
+    border-radius: 3px;
+    color: #f8f8ff;
+    font-size: 20px;
+    height: 100%;
+    width: 80px;
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+    text-transform: uppercase;  
+}
+
+.modalBtn:hover {
+    background-color: #f8f8ff;
+    border: 3px solid cyan;
+    color: #000;
+}
+
 
 /* footer socials styling */
 .about {
@@ -148,7 +190,7 @@ body {
     position: fixed;
     left: 0;
     right: 0;
-    top: 40%;
+    top: 35%;
     bottom: 0;
     justify-content: center;
     align-items:center;
@@ -157,16 +199,40 @@ body {
 }
 
 .popupBody {
-    margin-top: auto;
-    margin-bottom: auto;
+    background: #f8f8ff;
+    border: 2px solid #c4302b;
+    border-radius: 12px;
+    height: 250px;
+    width: 450px;
+    margin: auto;
+    padding: 15px 10px 15px 10px;
 }
 
 
 .victoryPopup,
 h1,
 p {
-    color: #f8f8ff;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 5px;
     text-align: center;
+}
+
+#playAgain {
+    background-color: #000;
+    border: 3px solid cyan;
+    border-radius: 3px;
+    color: #f8f8ff;
+    height: 45px;
+    margin: 10px;
+    text-align: center;
+}
+
+#playAgain:hover {
+    background-color: #f8f8ff;
+    border: 3px solid cyan;
+    color: #000;
 }
 
 /* media queries */
