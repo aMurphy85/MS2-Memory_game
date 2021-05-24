@@ -84,18 +84,22 @@ const resetGuesses = () => {
 };
 
 // Flips counter function
-let counter = document.querySelector(".flips");
+let counter = document.querySelectorAll('.flips');
 
 function flipsCounter() {    
     flips++;    
     counter.innerHTML = flips;
 }
-let victoryModal = document.getElementById('victory');
+
 // Victory modal popup
-function victory() {
-    
-    victory.style.visibility = 'visible';
-    victory.querySelector('.totalFlips').innerHTML = '+ flips +';
+let victoryPopup = document.getElementById('victoryPopup');
+//let totalFlips = document.querySelector('.totalFlips');
+
+function victory(flips) {
+    setInterval(function() {
+        victoryPopup.classList.remove('victory');
+        counter.innerHTML = flips;
+    }, 2000);    
 }
 
 
