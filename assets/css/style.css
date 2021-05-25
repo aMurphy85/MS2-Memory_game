@@ -193,7 +193,7 @@ body {
     position: fixed;
     left: 0;
     right: 0;
-    top: 35%;
+    top: 32%;
     bottom: 0;
     align-items: center;
     width: 100vw;
@@ -226,10 +226,14 @@ p {
     text-align: center;
 }
 
+.totalFlips {
+    font-size: 25px;
+}
+
 #playAgain {
     background-color: #000;
-    border: 3px solid cyan;
-    border-radius: 3px;
+    border: 2px solid cyan;
+    border-radius: 6px;
     color: #f8f8ff;
     height: 45px;
     margin-top: 10px;
@@ -241,6 +245,11 @@ p {
     background-color: #f8f8ff;
     border: 3px solid cyan;
     color: #000;
+}
+
+.copyright {
+    color: #b1b1b1;
+    padding: 5px;
 }
 
 /* media queries */
