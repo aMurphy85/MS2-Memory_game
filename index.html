@@ -7,7 +7,8 @@
     <title>Among Us Memory Game</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -25,9 +26,8 @@
 
             <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link" id="aboutLink" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#about"><strong>About</strong></a>
-                    <a class="nav-link" id="howToPlayLink" href="#" data-bs-toggle="modal" data-bs-target="#howToPlay"><strong>How to play</strong></a>
-                    <a class="nav-link" id="steamLink" href="https://store.steampowered.com/app/945360/Among_Us/" target="_blank"><strong>Steam</strong><i class="fab fa-steam"></i></a>
+                    <a class="nav-link" id="aboutLink" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#about">About <i class="fas fa-info-circle"></i></a>
+                    <a class="nav-link" id="howToPlayLink" href="#" data-bs-toggle="modal" data-bs-target="#howToPlay">How to play <i class="fas fa-gamepad"></i></a>
                 </div>
             </div>
         </div>
@@ -41,7 +41,17 @@
                     <h2 class="modal-title" id="aboutModal"><strong>About</strong></h2>
                 </div>
                 <div class="modal-body">
-                    <h5><strong>Game info...</strong></h5>
+                    <p>
+                        <strong>
+                            Among Us is a multiplayer game for four to ten players. The game takes place in a space-themed setting, on one of 4 possible maps 
+                            in which players each take on one of two roles, most being Crewmates, and a predetermined number being Impostors. The goal of the 
+                            Crewmates are to identify the Impostors, eliminate them, and complete tasks around the map while the Impostors goal is to covertly 
+                            sabotage and kill the Crewmates before they complete all of their tasks. Players suspected to be Impostors may be eliminated via a 
+                            plurality vote, which any player may initiate by calling an emergency meeting (except during a crisis) or reporting a dead body. 
+                            Crewmates win if all Impostors are ejected or all tasks are completed, whereas Impostors win if there is an equal number of Impostors 
+                            and Crewmates, or if a critical sabotage goes unresolved.
+                        </strong>
+                    </p>
                 </div>
                 <div class="modal-footer justify-content-center">
                     <button type="button" class="btn modalBtn" data-bs-dismiss="modal"><strong>close</strong></button>
@@ -58,7 +68,11 @@
                     <h2 class="modal-title" id="howToPlayModal"><strong>How to play</strong></h2>
                 </div>
                 <div class="modal-body">
-                    <h5><strong>How to play</strong></h5>
+                    <p><strong>The aim of the game is to match all the pairs of crewmates with the minimum number of flips.</strong></p>
+                    <p><strong>You can only turn over 2 cards at a time.</strong></p>
+                    <p><strong>If the cards match they will dissapear from the screen, but if they do not match they will flip back to there original state.</strong></p>    
+                    <p><strong>You may leave or restart at anytime.</strong></p>
+                    <p><strong>Good luck!</strong></p>
                 </div>
                 <div class="modal-footer justify-content-center">
                     <button type="button" class="btn modalBtn" data-bs-dismiss="modal"><strong>close</strong></button>
@@ -79,7 +93,7 @@
     <!-- Game flips counter -->
         <div class="row justify-content-center">
             <div class="col-lg-12 instructions">
-                <h3><strong>Memory Game</strong></h3>
+                <h2><strong>Memory Game</strong></h2>
                 <h4 class="col-lg-12"><strong>Match all the cards in as little flips as possible...</strong></h4>
             </div>
              
@@ -97,6 +111,10 @@
     <div class="row no-gutters justify-content-center">
         <button type="button" id="restartBtn" class="btn restartBtn" data-bs-toggle="modal" data-bs-target="#restart">
         <strong>Restart</strong>
+        </button>
+        <!-- Quit game button -->
+        <button type="button" id="restartBtn" class="btn restartBtn" data-bs-toggle="modal" data-bs-target="#quitGame">
+        <strong>Quit</strong>
         </button>
 
         <!-- Restart btn Modal -->
@@ -118,6 +136,28 @@
         </div>
     </div>
 
+    <!-- Quit game btn modal -->
+    <div class="modal fade restartModal" id="quitGame" tabindex="-1" aria-labelledby="quitModal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title" id="quitModal"><strong>Oh No!</strong></h2>
+                    </div>
+                    <div class="modal-body">
+                        <h5><strong>You quit after making <br>
+                            <span class="totalFlips"> 0 </span> flips!</strong> <br>
+                            Sorry to see you go!
+                        </h5>
+                    </div>
+                    <div class="modal-footer justify-content-center">
+                        <button type="button" class="btn modalBtn" onclick="restart()"><strong>Leave</strong></button>
+                        <button type="button" class="btn modalBtn" data-bs-dismiss="modal"><strong>Stay</strong></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <Footer>
         <div class="col-12 justify-content-center copyright">
             <small><i class="far fa-copyright"></i> 2021 A.MURPHY</small>
@@ -129,17 +169,16 @@
         <div class="popupBody">
             <h1><strong>Victory!</strong></h1>
             <div class="popupContent">
-                <p><strong>Well done you manged to match all the cards in <br>
+                <h5><strong>Well done you manged to match all the cards in <br>
                     <span class="totalFlips"> 0 </span> flips!</strong> 
-                </p>
+                </h5>
             </div>
             <div class="popupFooter">
                 <p><strong>Think you can beat your score?</strong></p>
                 <button id="playAgain" onclick="restart()"><strong>Play Again</strong></button>
             </div>
         </div>
-    </div>
-    
+    </div>    
 
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
