@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600&display=swap');
 
 *,
 *::before,
@@ -11,10 +11,18 @@ body {
     margin: 0;
     display: block;
     font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 500;
     text-align: center;
     text-transform: uppercase;
 }
 /* Nav bar */
+
+#aboutLink,
+#howToPlayLink,
+#steamLink {
+    font-size: 22px;
+    margin: 0 10px 0 10px;
+}
 
 #aboutLink:hover {
     color: #6441a5;
@@ -64,7 +72,7 @@ body {
     margin: 10px;
     padding: 5px;
     text-align: center;
-    max-width: 150px;
+    max-width: 100px;
 }
 
 /* game area styling */
@@ -137,6 +145,7 @@ body {
     height: 100%;
     margin: 10px;
     padding: 5px;
+    width: 80px;
     text-align: center;
     text-transform: uppercase;
 }
@@ -192,13 +201,10 @@ body {
 
 
 /* footer socials styling */
-.about {
-    height: 75px;
-    background-color: #f8f8ff;
-    text-align: center;
-    margin-top: 10px;
-    padding: 30px;
-
+/* copyright styling */
+.copyright {
+    color: #000C0D;
+    padding: 5px;
 }
 
 .victory {
@@ -263,12 +269,6 @@ p {
     color: #000;
 }
 
-/* copyright styling */
-.copyright {
-    color: #696969;
-    padding: 5px;
-}
-
 /* media queries */
 
 @media (max-width: 672px) {
@@ -281,7 +281,7 @@ p {
     .back,
     .front {
     border-radius: 6px;
-    height: 85px;
+    height: 95px;
     width: 85px;
     }
     .card {
@@ -302,7 +302,7 @@ p {
     .back,
     .front {
     border-radius: 6px;
-    height: 80px;
+    height: 90px;
     width: 80px;
     }
     .card {
@@ -325,7 +325,7 @@ p {
     .back,
     .front {
     border-radius: 6px;
-    height: 70px;
+    height: 80px;
     width: 70px;
     }
     .card {
