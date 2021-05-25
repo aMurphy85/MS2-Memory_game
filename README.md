@@ -1,59 +1,90 @@
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome aMurphy85,
+# _Among Us Memory Game_
+- A simple memory game based on the hugely popular online murder mystery game (Among Us), set on a space station.
+- The main objective of the game is to match all the pairs of cards in as little flips as possible. 
+- The webpage has a very simple layout with a header with the games crewmates lined up which users will find amusing, a simple grid 
+layout for the cards, a flip counter and a restart button, all with a faded backdrop to imulate a outer space feel.
+- Great images of various crewmates carrying out various tasks have been used for the cards, that are bright and eye catching to 
+users.
+- Simple instructions make it clear on what users have to do without overwhelming them with to much infomation on load up.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+# _UX_
+- This website was created for users who are fans of the gaming world, inparticularly the among us game who are just looking to
+pass the time with a fun game.
 
-## Gitpod Reminders
+## _User Stories_
+- _A user to this webiste:_
+- I want to navigate through the site easily.
+- I want simple instructions on the games rules.
+- I want eye catching images and design layout on any device.
+- I want to test my memory skills while having fun.
+- I want a game complete notice telling me how many flips I did it in.
+- I want motivation to play again and try to better my previous scores.
+- I want a restart button so I can start the game over at anytime.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## _Wireframes_
 
-`python3 -m http.server`
 
-A blue button should appear to click: _Make Public_,
+## _Features_
+#### _Homepage_
+- A background that has a white center point and fades to a black towards the outskirts of the page.
+- A header image of the Among Us game title with various crewmate characters acting as a bottom border.
+- Clear simple instructions on how to play.
+- An interactive flips counter that keeps track of how many card flips you have had while trying to complete the game.
+- A 4 X 4 grid of cards displaying the image of a number of crewmates hanging out on a sofa playing on electronic devices.
+- Game cards that are large enough to be seen clearly, on all devices.
+- A restart button underneath the game cards that refreshes the page / flip counter, so users can start over whenever they want.
 
-Another blue button should appear to click: _Open Browser_.
+#### _After matching all the cards_
+- A victory pop up with a slight time delay, appears on game completion, that has a message congratulating you and indicates how 
+many flips it took you to match all the cards in.
+- The victory pop up also has a message inticing players to try and beat there previous flips score followed by a play again button
+that restarts the game.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+## _Features left to implement_
+- A difficult level with fewer or more cards depending on the difficulty selected.
+- A timer counter to go with the flips counter to challenge users to not only beat there flips attempts but also there time.
+- A on load up start screen pop up that holds the games title, a small introduction on how to play and a click to start.
+- Links to more information on the among us game (ie. Youtube videos of game play, twitch players playing the game live and to steam, where
+players can purchase the game if they fancy giving it a go for themselves).
+- Audio and visual ques from the game for background theme, correct and incorrect card matches, a victory pop up indicator etc, to help make the user
+feel more interaction to the site.
 
-A blue button should appear to click: _Make Public_,
+## _technologies used_
+#### _Languages used_
+- HTML5 for page content.
+- CSS for page element styling.
+- JavaScript for game logic.
 
-Another blue button should appear to click: _Open Browser_.
+#### _Frameworks used_
+- Balsamic wireframes
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+#### _Libraries used_
+- - [BootStrap](https://getbootstrap.com/docs/4.1/content/tables/)
 
-To log into the Heroku toolbelt CLI:
+    - **Bootstrap classes** to make elements responsive to different screen devices.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+#### _Tools and Other resources used_
+- GitHub
+- GitPod
+- W3Schools
+- CityPNG
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidently make it public then you can create a new one with _Regenerate API Key_.
+#### _Code used_
 
-## Updates Since The Instructional Video
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+## _Testing_
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+### __HTML validator results__
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+### __CSS validator results__
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+### __JavaScript validator results__
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+## _Issues I encountered_
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+## _Deployment_
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
----
-
-Happy coding!
+## _Credits_
