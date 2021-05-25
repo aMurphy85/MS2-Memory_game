@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
+
 *,
 *::before,
 *::after {
@@ -8,8 +10,22 @@ body {
     background: radial-gradient(#D3D3D3, #696969);
     margin: 0;
     display: block;
+    font-family: 'Barlow Condensed', sans-serif;
     text-align: center;
     text-transform: uppercase;
+}
+/* Nav bar */
+
+#aboutLink:hover {
+    color: #6441a5;
+}
+
+#howToPlayLink:hover {
+    color: #c4302b;
+}
+
+#steamLink:hover {
+    color: #54a5d4;
 }
 
 /* header */
@@ -53,7 +69,7 @@ body {
 
 /* game area styling */
 .grid {
-    background: #F4F4F9;
+    background: #f8f8ff;
     border-radius: 12px;
     height: 640px;
     width: 640px;
@@ -88,7 +104,7 @@ body {
 
 .front {
     z-index: 2;
-    background: #2F4550 url('../imgs/backCard\ \(2\)\ \(1\).png') no-repeat center center / contain;
+    background: #000C0D url('../imgs/backCard\ \(2\)\ \(1\).png') no-repeat center center / contain;
 }
 
 .front:hover {
@@ -97,7 +113,7 @@ body {
 
 .back {
     transform: rotateY(180deg);
-    background-color: #B8DBD9;
+    background-color: #c7d5e0;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
