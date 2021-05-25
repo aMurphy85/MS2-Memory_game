@@ -85,21 +85,23 @@ const resetGuesses = () => {
 
 // Flips counter function
 let counter = document.querySelector(".flips");
+let totalFlips = document.querySelector('.totalFlips');
 
 function flipsCounter() {
     flips++;    
     counter.innerHTML = flips;
-}
+    totalFlips.innerHTML = flips;
+};
 
 // Victory modal popup
 let victoryPopup = document.getElementById('victoryPopup');
-//let totalFlips = document.querySelector('.totalFlips');
+
 
 function victory(flips) {
     setInterval(function() {
         victoryPopup.classList.remove('victory');
-    }, 2000);    
-}
+    }, 500);    
+};
 
 
 
