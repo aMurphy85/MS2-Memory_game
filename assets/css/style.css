@@ -1,339 +1,367 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600&display=swap");
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body {
-    background: radial-gradient(#D3D3D3, #696969);
-    margin: 0;
-    display: block;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 500;
-    text-align: center;
-    text-transform: uppercase;
+	background: radial-gradient(#d3d3d3, #696969);
+	margin: 0;
+	display: block;
+	font-family: "Barlow Condensed", sans-serif;
+	font-weight: 500;
+	text-align: center;
+	text-transform: uppercase;
 }
+
+
 /* Nav bar */
 
 #aboutLink,
-#howToPlayLink,
-#steamLink {
-    font-size: 22px;
-    margin: 0 10px 0 10px;
+#howToPlayLink {
+	font-size: 22px;
+	margin: 0 10px 0 10px;
 }
 
 #aboutLink:hover {
-    color: #6441a5;
+	color: #6441a5;
 }
 
 #howToPlayLink:hover {
-    color: #c4302b;
+	color: #c4302b;
 }
 
-#steamLink:hover {
-    color: #54a5d4;
-}
 
 /* header */
+
 .header {
-    align-content: center;
-    border-bottom: 3px dashed #000;
-    height: 200px;
-    max-width: 650px;
-    margin: 10px;
-    padding: 20px;
+	align-content: center;
+	border-bottom: 3px dashed #000;
+	height: 200px;
+	max-width: 650px;
+	margin: 10px;
+	padding: 20px;
 }
 
 .header img {
-    height: 100%;
-    width: 100%;
-    max-width: 700px;
+	height: 100%;
+	width: 100%;
+	max-width: 700px;
 }
 
 .instructions {
-    color: #000;
-    text-align: center;
+	color: #000;
+	text-align: center;
 }
 
+
 /* scores timer and clicks counter */
+
 .flips {
-    margin: 3px;
-    padding: 0;
+	margin: 3px;
+	padding: 0;
 }
 
 .results {
-    background-color: #000;
-    border: 3px solid #f8f8ff;
-    border-radius: 6px;
-    color: #f8f8ff;
-    font-size: 20px;
-    margin: 10px;
-    padding: 5px;
-    text-align: center;
-    max-width: 100px;
+	background-color: #000;
+	border: 3px solid #f8f8ff;
+	border-radius: 6px;
+	color: #f8f8ff;
+	font-size: 20px;
+	margin: 10px;
+	padding: 5px;
+	text-align: center;
+	max-width: 100px;
 }
 
+
 /* game area styling */
+
 .grid {
-    background: #f8f8ff;
-    border-radius: 12px;
-    height: 640px;
-    width: 640px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
+	background: #f8f8ff;
+	border-radius: 12px;
+	height: 640px;
+	width: 640px;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-evenly;
 }
 
 .card {
-    position: relative;
-    transition: all .4s linear;
-    transform-style: preserve-3d;
-    margin: 5px;
-    border: 0;
+	position: relative;
+	transition: all 0.4s linear;
+	transform-style: preserve-3d;
+	margin: 5px;
+	border: 0;
 }
 
 .card,
 .back,
 .front {
-    border-radius: 6px;
-    height: 150px;
-    width: 150px;
+	border-radius: 6px;
+	height: 150px;
+	width: 150px;
 }
 
 .back,
 .front {
-    position: absolute;
-    backface-visibility: hidden;
+	position: absolute;
+	backface-visibility: hidden;
 }
 
 .front {
-    z-index: 2;
-    background: #000C0D url('../imgs/backCard\ \(2\)\ \(1\).png') no-repeat center center / contain;
+	z-index: 2;
+	background: #000c0d url("../imgs/backCard\ \(2\)\ \(1\).png") no-repeat center center / contain;
 }
 
 .front:hover {
-    border: 3px solid #01DAE5;
+	border: 3px solid #01dae5;
 }
 
 .back {
-    transform: rotateY(180deg);
-    background-color: #c7d5e0;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
+	transform: rotateY(180deg);
+	background-color: #c7d5e0;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
 }
 
 .selected {
-    transform: rotateY(180deg);
+	transform: rotateY(180deg);
 }
 
 .match .front {
-    background: none !important;
+	background: none !important;
 }
 
-/* restart game button and modal styling */
-#restartBtn {
-    background-color: #000;
-    border: 3px solid #f8f8ff;
-    border-radius: 3px;
-    color: #f8f8ff;
-    font-size: 20px;
-    height: 100%;
-    margin: 10px;
-    padding: 5px;
-    width: 80px;
-    text-align: center;
-    text-transform: uppercase;
+
+/* restart and quit game button and modal styling */
+
+.restartBtn {
+	background-color: #000;
+	border: 3px solid #f8f8ff;
+	border-radius: 3px;
+	color: #f8f8ff;
+	font-size: 20px;
+	height: 100%;
+	margin: 10px;
+	padding: 5px;
+	width: 80px;
+	text-align: center;
+	text-transform: uppercase;
 }
 
-#restartBtn:hover {
-    background-color: #f8f8ff;
-    border: 3px solid cyan;
-    color: #000;
+.restartBtn:hover {
+	background-color: #f8f8ff;
+	border: 3px solid cyan;
+	color: #000;
+}
+
+.quitBtn {
+	background-color: #000;
+	border: 3px solid #f8f8ff;
+	border-radius: 3px;
+	color: #f8f8ff;
+	font-size: 20px;
+	height: 100%;
+	margin: 10px;
+	padding: 5px;
+	width: 80px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.quitBtn:hover {
+	background-color: #f8f8ff;
+	border: 3px solid cyan;
+	color: #000;
 }
 
 .restartModal {
-    text-transform: uppercase;
+	text-transform: uppercase;
 }
 
 .modal-content {
-    background: #f8f8ff;
-    border: 2px solid #c4302b;
-    border-radius: 12px;
-    text-align: center;
+	background: #f8f8ff;
+	border: 2px solid #c4302b;
+	border-radius: 12px;
+	text-align: center;
 }
 
 .modal-title {
-    height: 100%;
-    width: 100%;
-    text-align: center;
+	height: 100%;
+	width: 100%;
+	text-align: center;
 }
 
 .modal-footer {
-    height: 100%;
-    width: 100%;
-    padding-top: 0;
+	height: 100%;
+	width: 100%;
+	padding-top: 0;
 }
 
 .modalBtn {
-    background-color: #000;
-    border: 2px solid cyan;
-    border-radius: 3px;
-    color: #f8f8ff;
-    font-size: 20px;
-    height: 100%;
-    width: 80px;
-    margin: 10px;
-    padding: 5px;
-    text-align: center;
-    text-transform: uppercase;  
+	background-color: #000;
+	border: 2px solid cyan;
+	border-radius: 3px;
+	color: #f8f8ff;
+	font-size: 20px;
+	height: 100%;
+	width: 80px;
+	margin: 10px;
+	padding: 5px;
+	text-align: center;
+	text-transform: uppercase;
 }
 
 .modalBtn:hover {
-    background-color: #f8f8ff;
-    border: 3px solid cyan;
-    color: #000;
+	background-color: #f8f8ff;
+	border: 3px solid cyan;
+	color: #000;
 }
 
 
 /* footer socials styling */
+
+
 /* copyright styling */
+
 .copyright {
-    color: #000C0D;
-    padding: 5px;
+	color: #000c0d;
+	padding: 5px;
 }
 
 .victory {
-    visibility: hidden;
+	visibility: hidden;
 }
 
 #victoryPopup {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 32%;
-    bottom: 0;
-    align-items: center;
-    width: 100vw;
-    z-index: 100;    
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 32%;
+	bottom: 0;
+	align-items: center;
+	width: 100vw;
+	z-index: 100;
 }
 
 .popupBody {
-    background: #f8f8ff;
-    border: 2px solid #c4302b;
-    border-radius: 12px;
-    height: fit-content;
-    width: fit-content;
-    margin: auto;
-    padding: 15px 10px 15px 10px;
-    text-align: center;
+	background: #f8f8ff;
+	border: 2px solid #c4302b;
+	border-radius: 12px;
+	height: fit-content;
+	width: fit-content;
+	margin: auto;
+	padding: 15px 10px 15px 10px;
+	text-align: center;
 }
 
 .popupFooter,
 button {
-    text-align: center;
+	text-align: center;
 }
 
 .victoryPopup,
 h1,
 p {
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    padding: 5px;
-    text-align: center;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	padding: 5px;
+	text-align: center;
 }
 
 .totalFlips {
-    font-size: 25px;
+	font-size: 25px;
 }
 
 #playAgain {
-    background-color: #000;
-    border: 2px solid cyan;
-    border-radius: 6px;
-    color: #f8f8ff;
-    height: 45px;
-    margin-top: 10px;
-    text-align: center;
-    text-transform: uppercase;
+	background-color: #000;
+	border: 2px solid cyan;
+	border-radius: 6px;
+	color: #f8f8ff;
+	height: 45px;
+	margin-top: 10px;
+	text-align: center;
+	text-transform: uppercase;
 }
 
 #playAgain:hover {
-    background-color: #f8f8ff;
-    border: 3px solid cyan;
-    color: #000;
+	background-color: #f8f8ff;
+	border: 3px solid cyan;
+	color: #000;
 }
+
 
 /* media queries */
 
 @media (max-width: 672px) {
-    .grid {
-        margin: 3px;
-        width: fit-content;
-        height: fit-content;
-    }
-    .card,
-    .back,
-    .front {
-    border-radius: 6px;
-    height: 95px;
-    width: 85px;
-    }
-    .card {
-        margin: 2px;
-    }
-    .popupBody {
-        margin: 5px;
-    }
+	.grid {
+		margin: 3px;
+		width: fit-content;
+		height: fit-content;
+	}
+	.card,
+	.back,
+	.front {
+		border-radius: 6px;
+		height: 95px;
+		width: 85px;
+	}
+	.card {
+		margin: 2px;
+	}
+	.popupBody {
+		margin: 5px;
+	}
 }
 
 @media (max-width: 360px) {
-    .grid {
-        height: fit-content;
-        width: fit-content;
-        margin: 2px;
-    }
-    .card,
-    .back,
-    .front {
-    border-radius: 6px;
-    height: 90px;
-    width: 80px;
-    }
-    .card {
-        margin: 2px;
-    }
-    .popupBody {
-        height: fit-content;
-        width: fit-content;
-        margin: 4px;
-    }
+	.grid {
+		height: fit-content;
+		width: fit-content;
+		margin: 2px;
+	}
+	.card,
+	.back,
+	.front {
+		border-radius: 6px;
+		height: 90px;
+		width: 80px;
+	}
+	.card {
+		margin: 2px;
+	}
+	.popupBody {
+		height: fit-content;
+		width: fit-content;
+		margin: 4px;
+	}
 }
 
 @media (max-width: 320px) {
-    .grid {
-        height: fit-content;
-        width: fit-content;
-        margin: 2px;
-    }
-    .card,
-    .back,
-    .front {
-    border-radius: 6px;
-    height: 80px;
-    width: 70px;
-    }
-    .card {
-        margin: 2px;
-    }
-    .popupBody {
-        height: fit-content;
-        width: fit-content;
-        margin: 4px;
-    }
+	.grid {
+		height: fit-content;
+		width: fit-content;
+		margin: 2px;
+	}
+	.card,
+	.back,
+	.front {
+		border-radius: 6px;
+		height: 80px;
+		width: 70px;
+	}
+	.card {
+		margin: 2px;
+	}
+	.popupBody {
+		height: fit-content;
+		width: fit-content;
+		margin: 4px;
+	}
 }
