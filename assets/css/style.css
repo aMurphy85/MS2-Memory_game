@@ -5,7 +5,7 @@
 }
 
 body {
-    background: radial-gradient(#b1b1b1, #000);
+    background: radial-gradient(#D3D3D3, #696969);
     margin: 0;
     display: block;
     text-align: center;
@@ -29,7 +29,7 @@ body {
 }
 
 .instructions {
-    color: #fafafa;
+    color: #000;
     text-align: center;
 }
 
@@ -53,7 +53,7 @@ body {
 
 /* game area styling */
 .grid {
-    background: #f8f8ff;
+    background: #F4F4F9;
     border-radius: 12px;
     height: 640px;
     width: 640px;
@@ -88,16 +88,16 @@ body {
 
 .front {
     z-index: 2;
-    background: #000 url('../imgs/backCard\ \(2\)\ \(1\).png') no-repeat center center / contain;
+    background: #2F4550 url('../imgs/backCard\ \(2\)\ \(1\).png') no-repeat center center / contain;
 }
 
 .front:hover {
-    border: 2px solid cyan;
+    border: 3px solid #01DAE5;
 }
 
 .back {
     transform: rotateY(180deg);
-    background-color: #FFDE2A;
+    background-color: #B8DBD9;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
@@ -247,8 +247,9 @@ p {
     color: #000;
 }
 
+/* copyright styling */
 .copyright {
-    color: #b1b1b1;
+    color: #696969;
     padding: 5px;
 }
 
@@ -275,7 +276,30 @@ p {
     }
 }
 
-@media (max-width: 321px) {
+@media (max-width: 360px) {
+    .grid {
+        height: fit-content;
+        width: fit-content;
+        margin: 2px;
+    }
+    .card,
+    .back,
+    .front {
+    border-radius: 6px;
+    height: 80px;
+    width: 80px;
+    }
+    .card {
+        margin: 2px;
+    }
+    .popupBody {
+        height: fit-content;
+        width: fit-content;
+        margin: 4px;
+    }
+}
+
+@media (max-width: 320px) {
     .grid {
         height: fit-content;
         width: fit-content;
