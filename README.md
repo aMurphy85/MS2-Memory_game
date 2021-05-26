@@ -134,6 +134,110 @@ feel more interaction to the site.
         - The website is responsive to all device sizes (desktop, tablet and phones) maintaining its 4 X 4 game grid with game
         card sizes that are still clear to see.
 
+### _Manual testing_
+#### _Desktop_
+    - Navbar links:
+        - Hover mouse over links, verify that the purple and red text color change effects the appropriate link.
+        - Click on both links, verify that the correct pop up modal comes up in the right location.
+
+    - Navbar:
+        - Scroll down the page, verify the navbar is not fixed to the top of the page at all times.
+
+    - Title image:
+        - Check the size and position fits the design and layout of the page.
+
+    - Header & Instructions:
+        - Verify the positioning is central, correct sizing for users to see clearly.
+    
+    - Flips counter:
+        - Verify the counter is positioned central is sized correctly for users to see clearly.
+
+    - Game area / cards:
+        - Verify game grid is central and fits the design of the page and clear to users to see.
+        - Verify the cards are sized well, and spaced evenly apart creating a smoother UX.
+        - Verify the card images are clear for users to see.
+        - Hover over the cards, verify the bright cyan border is working making it clear to user what 
+        card they are on.
+        - Click on the game cards, verify that the cards are rotating and displaying the crewmate images
+        for users to match.
+        - Click on same card, verify that the turned over card can't be clicked on again and simulate a 
+        match.
+        - Click on 2 cards, verify that a third card can't be selected.
+        - Cards match, verify that when 2 cards that have been turned over match that they dissappear so
+        they can't be selected again.
+        - cards do not match, verify that when 2 cards that have been turned over do not match that they 
+        flip back over to the original state.
+
+    - Restart and Quit buttons:
+        - Verify that the 2 buttons are sized equally and spaced evenly apart.
+        - Hover on, verify that the background and text color change within the buttons.
+        - Click on the buttons, verify that the appropriate pop up modal shows with the correct content,
+        and is positioned correctly.
+        - Click on the modal buttons, verify that they perform the correct tasks:
+            - restart modal 'No', closes the modal window and continue playing the game.
+            - restart modal 'Yes', refreshes the page, shuffles the cards and resets flips counter.
+            - quit modal 'Stay', closes the modal window and continue playing the game.
+            - quit modal 'Leave', refreshes the page, shuffles the cards and resets flips counter.
+
+    - Victory pop up window:
+        - Match all the cards and complete the game, verify that the victory pop up window shows after
+        the correct delay and is positioned correctly so that users can see it easily.
+        - Verify that the content within the modal is correct and shows the amount of flips the user 
+        made to complete the game.
+        - Play again button, verify that the button refreshes the page, shuffles the cards and resets 
+        flips counter ready for users to play again.
+
+#### _Tablet & Mobile devices_
+    - Navbar toggler icon:
+        - Verify that the burger icon shows up on smaller screen devices instead of the navbar links.
+        - Verify that when the burger icon is clicked on the dropdown menu works and reveals the 
+        links inside.
+        - Verify that when the navbar links have been clicked on that the appropriate modal displaying
+        the correct content pops up.
+
+    - Navbar:
+        - Scroll down the page, verify the navbar is not fixed to the top of the page at all times.
+
+    - Title image:
+        - Check the size and position still fits the design and layout of the page.
+    
+    - Header & Instructions:
+        - Verify the positioning is central, still a good size for users to see clearly.
+
+    - Flips counter:
+        - Verify the counter is positioned central, and still sized so that the users can still see it clearly.
+
+    - Game area / cards:
+        - Verify game grid fits the screen size appropriately, maintains the 4X4 grid and still clear for users to see.
+        - Verify the cards size changes to fit screen size, and spaced evenly apart creating a smoother UX.
+        - Verify the card images are still clear to the users to see.
+        - Click on the game cards, verify that the cards are rotating and displaying the crewmate images
+        for users to match.
+        - Click on same card, verify that the turned over card can't be clicked on again and simulate a 
+        match.
+        - Click on 2 cards, verify that a third card can't be selected.
+        - Cards match, verify that when 2 cards that have been turned over match that they dissappear so
+        they can't be selected again.
+        - cards do not match, verify that when 2 cards that have been turned over do not match that they 
+        flip back over to the original state.
+
+    - Restart and Quit buttons:
+        - Verify that the 2 buttons are still sized equally and clear to users.
+        - Click on the buttons, verify that the appropriate pop up modal shows with the correct content,
+        and fits the screen size correctly.
+        - Click on the modal buttons, verify that they perform the correct tasks:
+            - restart modal 'No', closes the modal window and continue playing the game.
+            - restart modal 'Yes', refreshes the page, shuffles the cards and resets flips counter.
+            - quit modal 'Stay', closes the modal window and continue playing the game.
+            - quit modal 'Leave', refreshes the page, shuffles the cards and resets flips counter.
+
+    - Victory pop up window:
+        - Match all the cards and complete the game, verify that the victory pop up window shows after
+        the correct delay and fits the screen correctly so that users can see it easily.
+        - Verify that the content within the modal is correct and shows the amount of flips the user 
+        made to complete the game.
+        - Play again button, verify that the button refreshes the page, shuffles the cards and resets 
+        flips counter ready for users to play again.
 
 ### __HTML validator results__
 
