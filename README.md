@@ -77,6 +77,7 @@ feel more interaction with the site.
 - W3Schools for help with my HTML, CSS, and JavaScript
 - CityPNG for the images used in the website
 - W3C HTML and CSS validator to check
+- Autoprixer CSS online to add moz kits
 
 #### _Code used_
 - [Tania_Rascia](https://www.taniarascia.com/how-to-create-a-memory-game-super-mario-with-plain-javascript/)
