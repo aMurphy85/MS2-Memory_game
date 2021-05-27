@@ -86,11 +86,13 @@ const resetGuesses = () => {
 // Flips counter function
 let counter = document.querySelector(".flips");
 let totalFlips = document.querySelector('.totalFlips');
+let quitFlips = document.querySelector('.quitFlips');
 
 function flipsCounter() {
     flips++;    
     counter.innerHTML = flips;
     totalFlips.innerHTML = flips;
+    quitFlips.innerHTML = flips;
 };
 
 // Victory modal popup
