@@ -1,4 +1,7 @@
+// The JavaScript to create the game made by following Tania Rascia
+// (https://www.taniarascia.com/how-to-create-a-memory-game-super-mario-with-plain-javascript/)
 // Game cards array
+// jshint esversion: 6
 
 const cardsArray = [
     {
@@ -93,7 +96,7 @@ function flipsCounter() {
     counter.innerHTML = flips;
     totalFlips.innerHTML = flips;
     quitFlips.innerHTML = flips;
-};
+}
 
 // Victory modal popup
 let victoryPopup = document.getElementById('victoryPopup');
@@ -103,7 +106,7 @@ function victory(flips) {
     setInterval(function() {
         victoryPopup.classList.remove('victory');
     }, 500);    
-};
+}
 
 
 
@@ -155,4 +158,3 @@ grid.addEventListener('click', event => {
 function restart() {
     document.location.href = "";
 }
- 
