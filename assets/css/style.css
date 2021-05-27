@@ -135,7 +135,7 @@ body {
 
 .front {
 	z-index: 2;
-	background: #000c0d url("../imgs/backCard 2.png") no-repeat center center / contain;
+	background: #000c0d url("../imgs/rsz_backcard_2.png") no-repeat center center / contain;
 }
 
 .front:hover {
