@@ -243,6 +243,14 @@ feel more interaction with the site.
 
 ![JShint](./assets/readme.imgs/jshint-js-checker.png)
 
+### __Lighthouse results__
+- Desktop results.
+![](./assets/readme.imgs/lighthouse-desktop.png)
+
+- Mobile results.
+
+![](./assets/readme.imgs/lighthouse-mobile.png)
+
 ## _Issues I encountered_
 - After running my script.js code through the JShint code quality tool and rectifying the issues highlighted I was 
 left with only one remaining. 
@@ -252,6 +260,31 @@ left with only one remaining.
 refresh and start the game over. The buttons did not refresh the page after the test so decided to leave the code as it was.
 
 ## _Deployment_
+
+- This webpage was developed using GitPod, commited and pushed to GitHub.
+- To deploy this webpage from it's GitHub repsoitories, the following steps were carried out;
+    1. Open GitHub webpage and log in.
+    2. From the drop down menu in the top right of the page, click on Your repositories.
+    3. From the list of repsoitories click on MS2-Memory_game
+    4. From the options above select Settings.
+    5. Once in the settings scroll down to find the GitHub pages section.
+    6. In the GitHub pages section, click on the Source dropdown menu where it says None and select Master.
+    7. After selecting Master, click on Save.
+    8. This should refresh the page and now the webpage is now deployed.
+    9. In the GitHub pages section the link to the webpage should now be visible.
+
+- To run this site locally.
+- To clone this repository from GitHub you'll need to,
+
+    1. Go to GitHub.com
+    2. Log in to my account.
+    3. Click on repsoitories.
+    4. Click on MS2-Memory_game.
+    5. Click on the green button marked "clone or download".
+    6. Click on the copy icon on the right side of the URL and this copies URL link.
+    7. Open repo or create new repo.
+    8. Type git clone and paste URL link and press enter.
+
 
 ## _Credits_
 #### _HTML_
