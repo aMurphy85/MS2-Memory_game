@@ -1,4 +1,4 @@
-![](./assets/readme.imgs/ms2-responsive.png)
+![Am I Responsive](./assets/readme.imgs/ms2-responsive.png)
 
 # _Among Us Memory Game_
 - A simple memory game based on the hugely popular online murder mystery game (Among Us), set on a space station.
@@ -81,8 +81,10 @@ feel more interaction to the site.
 - W3C HTML and CSS validator to check
 
 #### _Code used_
-- - [Tania_Rascia](https://www.taniarascia.com/how-to-create-a-memory-game-super-mario-with-plain-javascript/)
+- [Tania_Rascia](https://www.taniarascia.com/how-to-create-a-memory-game-super-mario-with-plain-javascript/)
     - **Tania_Rascia** followed instructions to create memory game template.
+- [Among_Us_Wikipedia](https://en.wikipedia.org/wiki/Among_Us)
+    - Taken snippet of code to use in the "About" pop up window.
 
 ## _Testing_
 ### _User stories testing_
@@ -240,8 +242,14 @@ feel more interaction to the site.
         flips counter ready for users to play again.
 
 ### __HTML validator results__
+- Results after running my HTML through the W3 online validator.
+
+![W3](./assets/readme.imgs/ms2-html-validator.png)
 
 ### __CSS validator results__
+- Results after running my CSS through the W3C online validator.
+
+![W3C](./assets/readme.imgs/ms2-css-validator.png)
 
 ### __JavaScript validator results__
 
@@ -252,6 +260,8 @@ feel more interaction to the site.
 ## _Credits_
 #### _HTML_
 - HTML was written by myself.
+- Content in the about information pop up window taken from the Among us wikipedia page and modified by my.
+    [Wikipedia_page](https://en.wikipedia.org/wiki/Among_Us)
 
 #### _CSS styling_ 
 - [Tania_rascia](https://www.taniarascia.com/how-to-create-a-memory-game-super-mario-with-plain-javascript/)
