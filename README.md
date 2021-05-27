@@ -1,4 +1,4 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+![](./assets/readme.imgs/ms2-responsive.png)
 
 # _Among Us Memory Game_
 - A simple memory game based on the hugely popular online murder mystery game (Among Us), set on a space station.
