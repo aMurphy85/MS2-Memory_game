@@ -23,7 +23,9 @@ pass the time with a fun game.
 - I want to be able to quit the game at any time.
 
 ## _Wireframes_
+- Balsamiq wireframes
 
+![](./assets/readme.imgs/MS2-wireframes.png)
 
 ## _Features_
 #### _Homepage_
@@ -62,13 +64,13 @@ feel more interaction with the site.
 - JavaScript for game logic.
 
 #### _Libraries and Frameworks used_
-- - [BootStrap](https://getbootstrap.com/docs/4.1/content/tables/)
+ - [BootStrap](https://getbootstrap.com/docs/4.1/content/tables/)
     - **Bootstrap classes** to make elements responsive to different screen devices.
-- - [Font_awesome](https://fontawesome.com/)
+ - [Font_awesome](https://fontawesome.com/)
     - **Font awesome icons** to decorate the text.
-- - [Google_fonts](https://fonts.google.com/)
+ - [Google_fonts](https://fonts.google.com/)
     - **Google fonts** for the font used in the webpage.
-- - [Balsamiq_Wireframes](https://balsamiq.com/wireframes/?gclid=CjwKCAjw47eFBhA9EiwAy8kzNIzUJovs67fX-HxfKaqbrJD7TjNN_URl15EZ4nMv_BDX0TkEIpQg_xoCdLMQAvD_BwE)
+ - [Balsamiq_Wireframes](https://balsamiq.com/wireframes/?gclid=CjwKCAjw47eFBhA9EiwAy8kzNIzUJovs67fX-HxfKaqbrJD7TjNN_URl15EZ4nMv_BDX0TkEIpQg_xoCdLMQAvD_BwE)
     - **Balsamiq wireframes** to create mockups of what the site will look like.
 
 #### _Tools and Other resources used_
