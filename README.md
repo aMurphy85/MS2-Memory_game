@@ -254,11 +254,16 @@ feel more interaction with the site.
 
 ## _Issues I encountered_
 - After running my script.js code through the JShint code quality tool and rectifying the issues highlighted I was 
-left with only one remaining. 
+left with only one remaining.
     - "One unused variable, line 156, restart"
 
 - I temporarily removed the restart() function and tried the restart and play again button to check if the website would
 refresh and start the game over. The buttons did not refresh the page after the test so decided to leave the code as it was.
+
+- After deploying the website and running the game on my phone I noticed that the cards flip over but the images do not show up.
+The game still functions absolutely fine in chrome dev tools on smaller devices.
+    - Tried resizing the images and compressing the files, and it didn't work so decided to keep original files as the picture quality
+    on desktop was so much better.
 
 ## _Deployment_
 
