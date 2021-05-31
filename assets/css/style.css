@@ -134,7 +134,7 @@ body {
 }
 
 .front {
-	z-index: 2;
+	
 	background: #000c0d url("../imgs/backCard 2.png") no-repeat center center / contain;
 }
 
@@ -148,13 +148,12 @@ body {
 	background-color: #c7d5e0;
 	background-size: contain;
 	background-repeat: no-repeat;
-	background-position: center center;
+    background-position: center center;
 }
 
 .selected {
 	-webkit-transform: rotateY(180deg);
             transform: rotateY(180deg);
-    z-index: 3;
 }
 
 .match .front {
