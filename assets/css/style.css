@@ -104,7 +104,8 @@ body {
 	        align-items: center;
 	-webkit-box-pack: space-evenly;
 	    -ms-flex-pack: space-evenly;
-	        justify-content: space-evenly;
+            justify-content: space-evenly;
+    z-index: -100;
 }
 
 .card {
@@ -145,7 +146,7 @@ body {
 .back {
 	-webkit-transform: rotateY(180deg);
 	        transform: rotateY(180deg);
-	background-color: #c7d5e0;
+	background-color: #000508;
 	background-size: contain;
 	background-repeat: no-repeat;
     background-position: center center;
@@ -157,7 +158,7 @@ body {
 }
 
 div.selected > div.back {
-    z-index: 3;
+    z-index: 100;
 }
 
 .match .front {
