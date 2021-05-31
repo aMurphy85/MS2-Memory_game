@@ -134,7 +134,7 @@ body {
 }
 
 .front {
-	z-index: 2;
+    z-index: 2;
 	background: #000c0d url("../imgs/backCard 2.png") no-repeat center center / contain;
 }
 
@@ -149,7 +149,6 @@ body {
 	background-size: contain;
 	background-repeat: no-repeat;
     background-position: center center;
-    z-index: -1;
 }
 
 .selected {
@@ -157,10 +156,13 @@ body {
             transform: rotateY(180deg);
 }
 
+div.selected > div.back {
+    z-index: 3;
+}
+
 .match .front {
 	background: none !important;
 }
-
 
 /* restart and quit game button and modal styling */
 
@@ -246,10 +248,6 @@ body {
 	border: 3px solid cyan;
 	color: #000;
 }
-
-
-/* footer socials styling */
-
 
 /* copyright styling */
 
