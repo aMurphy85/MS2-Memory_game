@@ -134,7 +134,7 @@ body {
 }
 
 .front {
-	
+	z-index: 2;
 	background: #000c0d url("../imgs/backCard 2.png") no-repeat center center / contain;
 }
 
@@ -149,6 +149,7 @@ body {
 	background-size: contain;
 	background-repeat: no-repeat;
     background-position: center center;
+    z-index: 100;
 }
 
 .selected {
