@@ -156,13 +156,14 @@ body {
             transform: rotateY(180deg);
 }
 
-div.selected > div.back {
-    z-index: 3;
-}
-
 .match .front {
 	background: none !important;
 }
+
+.card.match {
+    transform: rotateY(180deg);
+}
+
 
 /* restart and quit game button and modal styling */
 
